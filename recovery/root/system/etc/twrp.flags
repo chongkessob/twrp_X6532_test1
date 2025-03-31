@@ -39,9 +39,8 @@
 /external_sd		auto		/dev/block/mmcblk1p1				/dev/block/mmcblk0p1					flags=display="Micro SD Card";storage;wipeingui;removable;backup=0
 /usb_otg		auto		/dev/block/sda1					/dev/block/sda		/dev/block/sdd1			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
 
-# Flashable logical partitions
-/system_image		emmc		/dev/block/bootdevice/by-name/system									flags=backup;flashimg
-/vendor_image		emmc		/dev/block/bootdevice/by-name/vendor									flags=backup;flashimg
-/system_ext_image	emmc		/dev/block/bootdevice/by-name/system_ext								flags=display="System_EXT Image";backup;flashimg
-/product_image		emmc		/dev/block/bootdevice/by-name/product									flags=display="Product Image";backup;flashimg
-/vendor_dlkm_image	emmc		/dev/block/bootdevice/by-name/vendor_dlkm								flags=display="VendorDLKM Image";backup;flashimg
+
+/system_image		emmc		/dev/block/bootdevice/by-name/system									flags=display="System";backup;flashimg
+/vendor_image		emmc		/dev/block/bootdevice/by-name/vendor									flags=display="Vendor";backup;flashimgl
+/system_ext_image	emmc		/dev/block/bootdevice/by-name/system_ext								flags=display="System_ext";backup;flashimg
+/product_image		emmc		/dev/block/bootdevice/by-name/product									flags=display="Product";backup;flashimg
