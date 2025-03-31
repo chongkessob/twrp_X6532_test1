@@ -1,23 +1,11 @@
 # Android fstab file for TWRP
 # Logical partitions for Virtual A/B (Dynamic Partitions)
 
-# Stock ROM uses EROFS, but GSI/Custom ROM uses EXT4
-
-# Mounting partitions (EROFS for stock, EXT4 for custom ROM)
-system              /system         erofs       ro              wait,slotselect,logical
-system              /system         ext4        ro              wait,slotselect,logical
-vendor              /vendor         erofs       ro              wait,slotselect,logical
-vendor              /vendor         ext4        ro              wait,slotselect,logical
-product             /product        erofs       ro              wait,slotselect,logical
-product             /product        ext4        ro              wait,slotselect,logical
-system_ext          /system_ext     erofs       ro              wait,slotselect,logical
-system_ext          /system_ext     ext4        ro              wait,slotselect,logical
-
-# Mapper paths for flashing EXT4 images
-/system        ext4    /dev/block/mapper/system        rw  wait,logical
-/system_ext    ext4    /dev/block/mapper/system_ext    rw  wait,logical
-/product       ext4    /dev/block/mapper/product       rw  wait,logical
-/vendor        ext4    /dev/block/mapper/vendor        rw  wait,logical
+# Super Partitions
+/system_a           emmc        /dev/block/mapper/system_a                                flags=backup=1;flashimg=1;slotselect;display="System A"
+/vendor_a           emmc        /dev/block/mapper/vendor_a                                flags=backup=1;flashimg=1;slotselect;display="Vendor A"
+/product_a          emmc        /dev/block/mapper/product_a                               flags=backup=1;flashimg=1;slotselect;display="Product A"
+/system_ext_a       emmc        /dev/block/mapper/system_ext_a                            flags=backup=1;flashimg=1;slotselect;display="System_ext A"
 
 # Metadata & Userdata
 /dev/block/by-name/metadata  /metadata  ext4  noatime,nosuid,nodev,discard  wait,check,formattable
