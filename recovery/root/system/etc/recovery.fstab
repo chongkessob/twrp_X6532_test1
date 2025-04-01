@@ -2,10 +2,10 @@
 # Logical partitions for Virtual A/B (Dynamic Partitions)
 
 # Super Partitions
-/system_a           emmc        /dev/block/mapper/system_a                                flags=backup=1;flashimg=1;slotselect;display="System A"
-/vendor_a           emmc        /dev/block/mapper/vendor_a                                flags=backup=1;flashimg=1;slotselect;display="Vendor A"
-/product_a          emmc        /dev/block/mapper/product_a                               flags=backup=1;flashimg=1;slotselect;display="Product A"
-/system_ext_a       emmc        /dev/block/mapper/system_ext_a                            flags=backup=1;flashimg=1;slotselect;display="System_ext A"
+/system           emmc        /dev/block/mapper/system                                flags=backup=1;flashimg=1;slotselect;display="System"
+/vendor           emmc        /dev/block/mapper/vendor                                flags=backup=1;flashimg=1;slotselect;display="Vendor"
+/product          emmc        /dev/block/mapper/product                               flags=backup=1;flashimg=1;slotselect;display="Product"
+/system_ext       emmc        /dev/block/mapper/system_ext                            flags=backup=1;flashimg=1;slotselect;display="System_ext"
 
 # Metadata & Userdata
 /dev/block/by-name/metadata  /metadata  ext4  noatime,nosuid,nodev,discard  wait,check,formattable
