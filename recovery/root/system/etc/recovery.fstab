@@ -1,15 +1,16 @@
 # Android fstab file for TWRP
 # Logical partitions for Virtual A/B (Dynamic Partitions)
 
-# Super Partitions    <fstype>           <directory>                                                    <flags>                                                    
-/system                erofs       /dev/block/mapper/system                       flags=backup=1;flashimg=1;slotselect;display="System"
-/system                ext4        /dev/block/mapper/system                       flags=backup=1;flashimg=1;slotselect;display="System"
-/vendor                erofs       /dev/block/mapper/vendor                       flags=backup=1;flashimg=1;slotselect;display="Vendor"
-/vendor                ext4        /dev/block/mapper/vendor                       flags=backup=1;flashimg=1;slotselect;display="Vendor"
-/product               erofs       /dev/block/mapper/product                      flags=backup=1;flashimg=1;slotselect;display="Product"
-/product               ext4        /dev/block/mapper/product                      flags=backup=1;flashimg=1;slotselect;display="Product"
-/system_ext            erofs       /dev/block/mapper/system_ext                   flags=backup=1;flashimg=1;slotselect;display="System_ext"
-/system_ext            ext4        /dev/block/mapper/system_ext                   flags=backup=1;flashimg=1;slotselect;display="System_ext"
+#<src>				<mnt_point>		<type>		<mnt_flags and options>															<fs_mgr_flags>
+# Logical partitions
+system				/system			erofs		ro																	wait,slotselect,logical
+system				/system			ext4		ro																	wait,slotselect,logical
+vendor				/vendor			erofs		ro																	wait,slotselect,logical
+vendor				/vendor			ext4		ro																	wait,slotselect,logical
+product				/product		erofs		ro																	wait,slotselect,logical
+product				/product		ext4		ro																	wait,slotselect,logical
+system_ext			/system_ext		erofs		ro																	wait,slotselect,logical
+system_ext			/system_ext		ext4		ro																	wait,slotselect,logical
 
 # Metadata & Userdata
 /dev/block/by-name/metadata  /metadata  ext4  noatime,nosuid,nodev,discard  wait,check,formattable
