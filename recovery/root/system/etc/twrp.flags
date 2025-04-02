@@ -36,9 +36,3 @@
 # Removable Storage
 /external_sd		auto		/dev/block/mmcblk1p1				/dev/block/mmcblk0p1					flags=display="Micro SD Card";storage;wipeingui;removable;backup=0
 /usb_otg		auto		/dev/block/sda1					/dev/block/sda		/dev/block/sdd1			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
-
-# Dynamic Partitions (Corrected for Super Partition Mapping)
-system_image		ext4		/dev/block/mapper/system									flags=display="System";backup;flashimg
-vendor_image		ext4		/dev/block/mapper/vendor									flags=display="Vendor";backup;flashimg
-system_ext_image	ext4		/dev/block/mapper/system_ext								flags=display="System_ext";backup;flashimg
-product_image		ext4		/dev/block/mapper/product									flags=display="Product";backup;flashimg
