@@ -1,11 +1,15 @@
 # Android fstab file for TWRP
 # Logical partitions for Virtual A/B (Dynamic Partitions)
 
-# Super Partitions
-/system           emmc        /dev/block/mapper/system                                flags=backup=1;flashimg=1;slotselect;display="System"
-/vendor           emmc        /dev/block/mapper/vendor                                flags=backup=1;flashimg=1;slotselect;display="Vendor"
-/product          emmc        /dev/block/mapper/product                               flags=backup=1;flashimg=1;slotselect;display="Product"
-/system_ext       emmc        /dev/block/mapper/system_ext                            flags=backup=1;flashimg=1;slotselect;display="System_ext"
+# Super Partitions    <fstype>           <directory>                                                    <flags>                                                    
+/system                erofs       /dev/block/mapper/system                       flags=backup=1;flashimg=1;slotselect;display="System"
+/system                ext4        /dev/block/mapper/system                       flags=backup=1;flashimg=1;slotselect;display="System"
+/vendor                erofs       /dev/block/mapper/vendor                       flags=backup=1;flashimg=1;slotselect;display="Vendor"
+/vendor                ext4        /dev/block/mapper/vendor                       flags=backup=1;flashimg=1;slotselect;display="Vendor"
+/product               erofs       /dev/block/mapper/product                      flags=backup=1;flashimg=1;slotselect;display="Product"
+/product               ext4        /dev/block/mapper/product                      flags=backup=1;flashimg=1;slotselect;display="Product"
+/system_ext            erofs       /dev/block/mapper/system_ext                   flags=backup=1;flashimg=1;slotselect;display="System_ext"
+/system_ext            ext4        /dev/block/mapper/system_ext                   flags=backup=1;flashimg=1;slotselect;display="System_ext"
 
 # Metadata & Userdata
 /dev/block/by-name/metadata  /metadata  ext4  noatime,nosuid,nodev,discard  wait,check,formattable
