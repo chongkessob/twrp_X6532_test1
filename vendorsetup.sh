@@ -38,7 +38,7 @@ export OF_MAINTAINER="Chongkessob"
 
 export FOX_VANILLA_BUILD=1
 
-export OF_USE_LZ4_COMPRESSION=true
+export OF_USE_LZ4_COMPRESSION=1
 
 # OrangeFox Addons
 export FOX_USE_BASH_SHELL=1
