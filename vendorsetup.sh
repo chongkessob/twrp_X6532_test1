@@ -36,6 +36,8 @@ export OF_MAINTAINER="Chongkessob"
 # Keymaster
 #export OF_DEFAULT_KEYMASTER_VERSION=4.1
 
+export FOX_VANILLA_BUILD=1
+
 export OF_USE_LZ4_COMPRESSION=true
 
 # OrangeFox Addons
