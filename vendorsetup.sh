@@ -54,6 +54,10 @@ export FOX_ENABLE_APP_MANAGER=1
 export OF_SUPPORT_VBMETA_AVB2_PATCHING=1
 export OF_USE_LZ4_COMPRESSION=true
 
+# Vendor & System
+export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+
 # Vendor Boot
 export FOX_VENDOR_BOOT_RECOVERY=1
 export FOX_USE_DATA_RECOVERY_FOR_SETTINGS=1
